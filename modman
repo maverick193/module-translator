@@ -1,0 +1,7 @@
+# Maverick_Translator modman file
+
+app/code/local/Maverick/Translator                   app/code/local/Maverick/Translator
+app/etc/modules/Maverick_Translator.xml              app/etc/modules/Maverick_Translator.xml
+app/design/adminhtml/default/default/layout/maverick/translator.xml     app/design/adminhtml/default/default/layout/maverick/translator.xml
+app/design/adminhtml/default/default/template/maverick/translator/modules/shipping.phtml    app/design/adminhtml/default/default/template/maverick/translator/modules/shipping.phtml
+app/design/adminhtml/default/default/template/maverick/translator/translation/container.phtml   app/design/adminhtml/default/default/template/maverick/translator/translation/container.phtml
