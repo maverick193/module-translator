@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Maverick_Translator Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @version
+ * @category    Maverick
+ * @package     Maverick_Translator
+ * @author      Mohammed NAHHAS <m.nahhas@live.fr>
+ * @copyright   Copyright (c) 2013 Mohammed NAHHAS
+ * @licence     OSL - Open Software Licence 3.0
+ *
+ */
+
+/**
+ * System XML
+ */
+-->
+<config>
+    <tabs>
+        <maverick translate="label" module="maverick_translator">
+            <label>Maverick</label>
+            <sort_order>10</sort_order>
+        </maverick>
+    </tabs>
+ 
+    <sections>
+        <translation  translate="label" module="maverick_translator">
+            <label>CSV Translation</label>
+            <sort_order>30</sort_order>
+            <tab>maverick</tab>
+            <show_in_default>1</show_in_default>
+            <show_in_website>0</show_in_website>
+            <show_in_store>0</show_in_store>
+            <groups>
+            	<bing_api translate="label" module="maverick_translator">
+                    <label>Bing Translation API</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                    	<note translate="label comment" module="maverick_translator">
+                   			<label></label>
+							<frontend_type>note</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[if you dont already have a Bing AppID, please visit <a href="http://www.microsofttranslator.com/dev/">Bing AppID website</a>, create your free account and subscribe the Bing Translation API service.]]> </comment>
+                    	</note>
+                    	<enable translate="label tooltip" module="maverick_translator">
+			           		<label>Enable Bing API Translator</label>
+		                   	<frontend_type>select</frontend_type>
+		                   	<source_model>adminhtml/system_config_source_yesno</source_model>
+		                   	<sort_order>20</sort_order>
+		                   	<show_in_default>1</show_in_default>
+		                   	<show_in_website>1</show_in_website>
+		                   	<show_in_store>0</show_in_store>
+						</enable>
+			        	<client_id translate="label tooltip" module="maverick_translator">
+			           		<label>Client ID</label>
+		                   	<frontend_type>text</frontend_type>
+		                   	<sort_order>30</sort_order>
+		                   	<show_in_default>1</show_in_default>
+		                   	<show_in_website>0</show_in_website>
+		                   	<show_in_store>0</show_in_store>
+						</client_id>
+						<client_secret>
+							<label>Client Secret</label>
+		                   	<frontend_type>text</frontend_type>
+		                   	<sort_order>40</sort_order>
+		                   	<show_in_default>1</show_in_default>
+		                   	<show_in_website>0</show_in_website>
+		                   	<show_in_store>0</show_in_store>
+						</client_secret>
+					</fields>
+				</bing_api>
+				<google_api translate="label" module="maverick_translator">
+				    <label>Google Translation API</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>0</show_in_website>
+                    <show_in_store>0</show_in_store>
+                    <fields>
+                    	<note translate="label comment" module="maverick_translator">
+                   			<label></label>
+							<frontend_type>note</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>0</show_in_website>
+							<show_in_store>0</show_in_store>
+							<comment><![CDATA[<strong>Todo</strong>]]> </comment>
+                    	</note>
+                    </fields>
+				</google_api>
+			</groups>
+		</translation>
+    </sections>
+</config>

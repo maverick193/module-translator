@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Maverick_Translator Extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * @version
+ * @category    Maverick
+ * @package     Maverick_Translator
+ * @author      Mohammed NAHHAS <m.nahhas@live.fr>
+ * @copyright   Copyright (c) 2013 Mohammed NAHHAS
+ * @licence     OSL - Open Software Licence 3.0
+ *
+ */
+
+/**
+ * Config XML
+ */
+ -->
+<config>
+    <!-- Module Version -->
+    <modules>
+        <Maverick_Translator>
+            <version>0.1.0</version>
+        </Maverick_Translator>
+    </modules>
+	<global>
+        <!-- Block -->
+		<blocks>
+			<maverick_translator>
+				<class>Maverick_Translator_Block</class>
+			</maverick_translator>
+		</blocks>
+
+        <!-- Helper -->
+		<helpers>
+			<maverick_translator>
+				<class>Maverick_Translator_Helper</class>
+			</maverick_translator>
+		</helpers>
+
+        <!-- Model & Resource Model -->
+		<models>
+			<maverick_translator>
+				<class>Maverick_Translator_Model</class>
+				<resourceModel>maverick_translator_resource</resourceModel>
+			</maverick_translator>
+			<maverick_translator_resource>
+			    <class>Maverick_Translator_Model_Resource</class>
+                <entities>
+                    <translation>
+                        <table>maverick_translator_csv_translation</table>
+                    </translation>
+                </entities>
+			</maverick_translator_resource>
+		</models>
+        <!-- Setup Resources -->
+		<resources>
+            <maverick_translator_setup>
+                <setup>
+                    <module>Maverick_Translator</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </maverick_translator_setup>
+        </resources>
+	</global>
+	<admin>
+        <!-- Admin Router -->
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<maverick_translator before="Mage_Adminhtml">Maverick_Translator_Adminhtml</maverick_translator>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<adminhtml>
+        <!-- Adminhtml Layout -->
+		<layout>
+			<updates>
+				<maverick_translator>
+					<file>maverick/translator.xml</file>
+				</maverick_translator>
+			</updates>
+		</layout>
+
+        <!-- CSV Translate File -->
+		<translate>
+			<modules>
+				<Maverick_Translator>
+					<files>
+						<default>Maverick_Translator.csv</default>
+					</files>
+				</Maverick_Translator>
+			</modules>
+		</translate>
+	</adminhtml>
+
+    <!-- Default Configuration Values -->
+	<default>
+		<admin_logger>
+			<general>
+				<enable>0</enable>
+			</general>
+		</admin_logger>
+		<translation>
+			<bing_api>
+				<enable>0</enable>
+			</bing_api>
+		</translation>
+	</default>
+</config>
