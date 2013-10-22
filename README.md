@@ -7,7 +7,7 @@ The module check the code of the choosen module and prepare a csv file which con
 
 In order to have a sentence included in the CSV file, it has to be passed as param to the translate function ( __->($word) ) or declared in the "@translate" attribute for XML files.
 
-The module translate :
+The module translates :
 - PHP classes in the module folder 
 - config.xml file
 - system.xml file
