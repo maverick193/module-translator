@@ -20,6 +20,11 @@ The module translate :
 
 Installation
 ============
+* Before installing this extension, you have to have **php5-xsl** extension installed :
+
+  example : run ```sudo apt-get install php5-xsl ``` on linux to install php-xsl extension
+
+
 * Install it with [modman](https://github.com/colinmollenhour/modman/wiki)
 * Or download and install it manually
 
