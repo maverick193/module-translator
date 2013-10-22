@@ -32,7 +32,7 @@ class Maverick_Translator_Block_Adminhtml_Translation_Container extends Mage_Adm
     {
         $this->_blockGroup = 'maverick_translator';
         $this->_controller = 'adminhtml_translation';
-        $this->_headerText = Mage::helper('maverick_translator')->__('Product Stock Alert Report');
+        $this->_headerText = Mage::helper('maverick_translator')->__('Module Translator');
 
         parent::__construct();
 
